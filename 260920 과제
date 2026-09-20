@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x;
+    int y;
+    cout << "프로그램 시작";
+    cout << "x 입력 : ";
+    cin >> x;
+    cout << "y 입력 : ";
+    cin >> y;
+    auto div = 1.0 * x / y;
+    cout << "x + y = " << x + y<<endl;
+    cout << "x - y = " << x - y<<endl;
+    cout << "x * y = " << x * y<<endl;
+    cout << "x / y = " << div<<endl;
+    cout << "x % y = " << x % y<<endl;
+    int ar[7];
+    int i = 1;
+    for (i = 0; i < 7; i++) {
+        cout << "ar["<<i<<"]입력 : ";
+        cin >> ar[i];
+    }
+    cout << "원소 전체 출력\n";
+    for (i = 0; i < 7; i++) {
+        cout << "ar[" << i << "] = "<<ar[i]<<"\t";
+    }
+    cout << "\n\n원소 중 홀수만 출력\n";
+    for (i = 0; i < 7; i++) {
+        if (ar[i] % 2 == 1) {
+            cout << "ar[" << i << "] = " << ar[i] << "\t";
+        }
+    }
+    cout << "\n\n모든 원소의 합 출력\n";
+    int sum = 0;
+        for (i = 0; i < 7; i++) {
+            sum = sum + ar[i];
+        }
+        cout << "모든 원소의 합 = " << sum;
+        cout << "\n\n원소 중 가장 큰 수 출력\n";
+        int biggest = ar[0];
+        for (i = 0; i < 7; i++) {
+            if (biggest < ar[i]) {
+                biggest = ar[i];
+            }
+        }
+        cout << "가장 큰 수  = " << biggest;
+    int a;
+    int b;
+    int c;
+    cout << "세 수 입력 : ";
+    cin >> a >> b >> c;
+    int big;
+    int small;
+    cout << "가장 큰 것 부터 출력\n";
+    if (a >= b) {
+        big = a;
+        small = b;
+    }
+    else {
+        big = b;
+        small = a;
+    }
+
+    if (small >= c) {
+        cout << big << " " << small << " " << c;
+    }
+    else if (big >= c) {
+        cout << big << " " << c << " " << small;
+    }
+    else {
+        cout << c << " " << big << " " << small;
+    }
+    
+    
+    i = 1;
+    cout << "정수 입력 : ";
+    cin >> a;
+    cout << "입력한 정수까지 1부터 출력\n";
+    while (i <= a) {
+        cout << i << " ";
+        i++;
+    }
+    cout << endl << endl;
+    cout << "홀수끼리만 더하기\n";
+    int sum = 0;
+    i = 1;
+    while (i <= a) {
+        if (i % 2 == 1) {
+            sum = i + sum;
+        }
+        i++;
+    }
+    cout << "홀수끼리의 합 : " << sum;
+    return 0;
+}
