@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+void ar_Mul() {
+	char a[2][2] = { {'a', 'b'},
+					{'c', 'd'}};
+	char b[2][2] = { {'e', 'f'},
+					{'g', 'h'}};
+	 cout << a[0][0] * b[0][0] + a[0][1] * b[1][0] <<" "<< a[0][0] * b[1][0] + a[1][0] * b[1][1]
+   <<endl << a[0][1] * b[0][0] + a[1][1] * b[0][1] <<" "<< a[0][1] * b[0][1] + a[1][1] * b[1][1];
+}
+
+int main(void) {
+	ar_Mul();
+	return 0;
+}
